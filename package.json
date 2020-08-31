@@ -1,0 +1,24 @@
+{
+  "name": "wattpad-clone",
+  "version": "1.0.0",
+  "description": "Wattpad Clone built using the MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wongzq/wattpad-clone.git"
+  },
+  "author": "Wong Zheng Quan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wongzq/wattpad-clone/issues"
+  },
+  "homepage": "https://github.com/wongzq/wattpad-clone#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.2"
+  }
+}
