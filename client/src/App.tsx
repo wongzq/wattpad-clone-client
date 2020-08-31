@@ -1,26 +1,80 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import "./App.css";
+import { BrowserRouter, Route, Switch, useHistory } from "react-router-dom";
+import UserReducer, {
+  IUserReducerActionType,
+  IUserReducerAction,
+} from "./reducers/UserReducer";
+import SignUp from "./screens/SignUp";
+import SignIn from "./screens/SignIn";
+import Home from "./screens/Home";
+import NavBar from "./components/NavBar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// UserContext to keep track of when user is logged in, using UserReducer
+export interface IUserContext {
+  state: any;
+  dispatch: React.Dispatch<IUserReducerAction>;
 }
 
-export default App;
+export const UserContext = React.createContext<IUserContext>({
+  state: {},
+  dispatch: () => {},
+});
+
+// AppRouting
+const AppRouting = () => {
+  const history = useHistory();
+  const { dispatch } = React.useContext(UserContext);
+
+  // check if user is logged in
+  React.useEffect(() => {
+    const userStr = localStorage.getItem("user");
+    if (userStr) {
+      dispatch({
+        type: IUserReducerActionType.USER,
+        payload: JSON.parse(userStr),
+      });
+    } else {
+      history.replace("/signin");
+    }
+  }, []);
+
+  return (
+    <Switch>
+      <Route exact path="/">
+        <Home></Home>
+      </Route>
+
+      <Route exact path="/signup">
+        <SignUp></SignUp>
+      </Route>
+
+      <Route exact path="/signin">
+        <SignIn></SignIn>
+      </Route>
+    </Switch>
+  );
+};
+
+// App
+export interface IAppProps {}
+
+export default function App(props: IAppProps) {
+  const [state, dispatch] = React.useReducer(
+    UserReducer.reducer,
+    UserReducer.initState
+  );
+
+  console.log(state);
+
+  return (
+    <UserContext.Provider value={{ state, dispatch }}>
+      <BrowserRouter>
+        <NavBar></NavBar>
+        {/* <div style={{ maxWidth: "80%", margin: "0 auto" }}>
+          <AppRouting></AppRouting>
+        </div> */}
+      </BrowserRouter>
+    </UserContext.Provider>
+  );
+}

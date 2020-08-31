@@ -5,6 +5,8 @@ const cors = require('cors')
 const { MONGODB_URI } = require('./config/keys')
 const PORT = process.env.PORT || 5000
 const app = express()
+app.use(cors())
+app.use(express.json())
 
 // connect to MongoDB
 mongoose.connect(MONGODB_URI, {
@@ -16,8 +18,6 @@ mongoose.connection.on('connected', () => console.log(`MongoDB connection succes
 mongoose.connection.on('error', (err) => console.log(`MongoDB connection error:\n${err}`))
 
 // routes
-app.use(cors())
-app.use(express.json())
 
 // listen
 app.listen(PORT, () => {
