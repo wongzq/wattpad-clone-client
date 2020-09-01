@@ -5,8 +5,6 @@ import UserReducer, {
   IUserReducerActionType,
   IUserReducerAction,
 } from "./reducers/UserReducer";
-import SignUp from "./screens/SignUp";
-import SignIn from "./screens/SignIn";
 import Home from "./screens/Home";
 import NavBar from "./components/NavBar";
 
@@ -44,14 +42,6 @@ const AppRouting = () => {
       <Route exact path="/">
         <Home></Home>
       </Route>
-
-      <Route exact path="/signup">
-        <SignUp></SignUp>
-      </Route>
-
-      <Route exact path="/signin">
-        <SignIn></SignIn>
-      </Route>
     </Switch>
   );
 };
@@ -71,9 +61,9 @@ export default function App(props: IAppProps) {
     <UserContext.Provider value={{ state, dispatch }}>
       <BrowserRouter>
         <NavBar></NavBar>
-        {/* <div style={{ maxWidth: "80%", margin: "0 auto" }}>
+        <div className="home-container">
           <AppRouting></AppRouting>
-        </div> */}
+        </div>
       </BrowserRouter>
     </UserContext.Provider>
   );

@@ -1,29 +1,25 @@
 /* Reset */
 
 :root {
-  --width: 1000px;
+  --width: 80rem;
   --primary-color: #ff4500;
   --bg-color: #fff;
 }
 
-ul {
+* {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  font-family: "Nunito", Georgia;
 }
 
 
 /* Custom */
 
-.nav-wrapper {
-  padding: 0px 20px;
-  margin: auto;
-  max-width: var(--width);
-}
-
 nav {
   background-color: var(--bg-color);
 }
 
-nav li,
 nav a {
   color: black !important;
   font-weight: 500;
@@ -33,10 +29,22 @@ a:hover {
   background-color: var(--bg-color) !important;
 }
 
+.nav {
+  margin: auto;
+  padding: 0px 10px;
+  max-width: var(--width);
+}
+
 .wattpad-logo {
-  padding: 0px 20px;
+  padding: 0 10px;
+  max-width: 10rem;
   vertical-align: middle;
-  max-width: 200px;
+}
+
+.home-container {
+  margin: auto;
+  padding: 0 20px;
+  max-width: var(--width);
 }
 
 
