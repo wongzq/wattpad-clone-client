@@ -1,13 +1,13 @@
 const initState = null;
 
-export enum IUserReducerActionType {
-  USER,
-  LOGOUT,
-}
-
 export interface IUserReducerAction {
   type?: IUserReducerActionType;
   payload?: any;
+}
+
+export enum IUserReducerActionType {
+  USER,
+  LOGOUT,
 }
 
 const reducer = (state: {} | null | undefined, action: IUserReducerAction) => {

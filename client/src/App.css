@@ -13,43 +13,6 @@
   font-family: "Nunito", Georgia;
 }
 
-
-/* Custom */
-
-nav {
-  background-color: var(--bg-color);
-}
-
-nav a {
-  color: black !important;
-  font-weight: 500;
-}
-
-a:hover {
-  background-color: var(--bg-color) !important;
-}
-
-.nav {
-  margin: auto;
-  padding: 0px 10px;
-  max-width: var(--width);
-}
-
-.wattpad-logo {
-  padding: 0 10px;
-  max-width: 10rem;
-  vertical-align: middle;
-}
-
-.home-container {
-  margin: auto;
-  padding: 0 20px;
-  max-width: var(--width);
-}
-
-
-/* Utility */
-
 .no-shadows {
   box-shadow: none !important;
 }

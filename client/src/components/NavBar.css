@@ -1,0 +1,32 @@
+nav {
+  background-color: var(--bg-color);
+}
+
+.nav {
+  margin: auto;
+  padding: 0px 10px;
+  max-width: var(--width);
+}
+
+.nav-item {
+  margin: 0 1rem;
+  font-weight: 600;
+  color: black !important;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background-color: var(--bg-color) !important;
+}
+
+.wattpad-logo {
+  padding: 0 10px;
+  max-width: 10rem;
+  vertical-align: middle;
+}
+
+.home-container {
+  margin: auto;
+  padding: 0 20px;
+  max-width: var(--width);
+}
