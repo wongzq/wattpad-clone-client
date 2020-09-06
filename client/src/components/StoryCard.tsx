@@ -4,10 +4,6 @@ import "./StoryCard.css";
 export interface IStoryCardProps {
   imgUrl: string;
   genre: string;
-  title: string;
-  parts?: number;
-  completed?: boolean;
-  description?: string;
 }
 
 export default function StoryCard(props: { story: IStoryCardProps }) {
