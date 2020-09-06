@@ -1,15 +1,15 @@
 import * as React from "react";
 import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, useHistory } from "react-router-dom";
 import UserReducer, {
   IUserReducerActionType,
   IUserReducerAction,
 } from "./reducers/User.reducer";
-import Home from "./screens/Home";
+import Splash from "./screens/Splash";
 import NavBar, { AuthContext } from "./components/NavBar";
 import AuthReducer from "./reducers/Auth.reducer";
 import Auth from "./components/Auth";
-import Browse from "./screens/Browse";
+import Home from "./screens/Home";
 
 ////////////////////////////////////////////////////////////////////////////////
 // UserContext to keep track of when user is logged in, using UserReducer
@@ -26,26 +26,31 @@ export const UserContext = React.createContext<IUserContext>({
 // AppRouting Local Component
 const AppRouting = () => {
   // React Hooks
-  const { userDispatch: dispatch } = React.useContext(UserContext);
+  const { userState, userDispatch } = React.useContext(UserContext);
 
   // check if user is logged in
+  const history = useHistory();
   React.useEffect(() => {
     const userStr = localStorage.getItem("user");
-    if (userStr)
-      dispatch({
+    if (userStr) {
+      userDispatch({
         type: IUserReducerActionType.USER,
         payload: JSON.parse(userStr),
       });
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+      history.replace("/home");
+    } else {
+      history.replace("/home");
+    }
+  }, [userState]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Return component
   return (
     <Switch>
       <Route exact path="/">
-        <Home></Home>
+        <Splash></Splash>
       </Route>
-      <Route exact path="/browse">
-        <Browse></Browse>
+      <Route exact path="/home">
+        <Home></Home>
       </Route>
     </Switch>
   );

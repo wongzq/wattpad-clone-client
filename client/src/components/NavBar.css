@@ -1,11 +1,14 @@
-nav {
-  z-index: 1;
+.nav-container {
+  top: 0;
   position: sticky;
+  z-index: 1;
+}
+
+nav {
   background-color: var(--bg-color);
 }
 
-
-.nav {
+.nav-content {
   margin: auto;
   padding: 0px 10px;
   max-width: var(--width);

@@ -23,9 +23,9 @@ export default function NavBar(props: INavBarProps) {
 
   // Return component
   return (
-    <div>
+    <div className="nav-container">
       <nav>
-        <div className="nav">
+        <div className="nav-content">
           <ul>
             <li>
               <Link to="/" className="nav-item">
@@ -37,7 +37,7 @@ export default function NavBar(props: INavBarProps) {
               </Link>
             </li>
             <li>
-              <Link to="/browse" className="nav-item">
+              <Link to="/home" className="nav-item">
                 Browse
               </Link>
             </li>

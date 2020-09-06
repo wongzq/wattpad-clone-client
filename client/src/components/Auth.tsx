@@ -19,13 +19,7 @@ export default function Auth(props: ISignUpProps) {
 
   // Return component
   return (
-    <div
-      className="auth-overlay"
-      onClick={(e) => {
-        e.stopPropagation();
-        authDispatch(EAuthAction.ALL_HIDE);
-      }}
-    >
+    <div className="auth-overlay">
       <div className="auth-dialog">
         {/* Close button */}
         <i

@@ -1,0 +1,25 @@
+.card {
+  width: 10rem;
+  border-radius: 0.5rem !important;
+}
+
+.card-image img {
+  border-radius: 0.5rem !important;
+}
+
+.card-tags {
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.material-icons {
+  font-size: 1.4rem;
+  margin-right: 0.5rem;
+}
+
+.chip {
+  margin: 0;
+  padding: 0 1rem;
+  font-size: 0.8rem;
+}
