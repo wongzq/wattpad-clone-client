@@ -1,7 +1,7 @@
 import * as React from "react";
-import Auth from "./Auth";
 import AuthReducer, { IAuthState, EAuthAction } from "../reducers/Auth.reducer";
 import "./NavBar.css";
+import { Link } from "react-router-dom";
 
 ////////////////////////////////////////////////////////////////////////////////
 // AuthContext for AuthReducer
@@ -28,14 +28,18 @@ export default function NavBar(props: INavBarProps) {
         <div className="nav">
           <ul>
             <li>
-              <img
-                className="nav-item wattpad-logo"
-                src={require("../assets/wattpad-title.png")}
-                alt="Wattpad"
-              />
+              <Link to="/" className="nav-item">
+                <img
+                  className="nav-item wattpad-logo"
+                  src={require("../assets/wattpad-title.png")}
+                  alt="Wattpad"
+                />
+              </Link>
             </li>
             <li>
-              <div className="nav-item">Browse</div>
+              <Link to="/browse" className="nav-item">
+                Browse
+              </Link>
             </li>
             <li>
               <div className="nav-item">Search</div>
@@ -45,7 +49,10 @@ export default function NavBar(props: INavBarProps) {
             <li>
               <div
                 className="nav-item"
-                onClick={() => authDispatch(EAuthAction.SIGNIN_SHOW)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  authDispatch(EAuthAction.SIGNIN_SHOW);
+                }}
               >
                 Log in
               </div>

@@ -8,7 +8,6 @@ export interface ISignUpProps {}
 export default function Auth(props: ISignUpProps) {
   // React Hooks
   const { authState, authDispatch } = React.useContext(AuthContext);
-  React.useEffect(() => {}, [authState]);
 
   // Custom functions
   const signInWithEmail = (e: React.MouseEvent) => {
@@ -20,18 +19,25 @@ export default function Auth(props: ISignUpProps) {
 
   // Return component
   return (
-    <div className="auth-overlay">
+    <div
+      className="auth-overlay"
+      onClick={(e) => {
+        e.stopPropagation();
+        authDispatch(EAuthAction.ALL_HIDE);
+      }}
+    >
       <div className="auth-dialog">
         {/* Close button */}
         <i
           className="material-icons btn-close"
-          onClick={() =>
-            authState.showSignIn
-              ? authDispatch(EAuthAction.SIGNIN_HIDE)
+          onClick={(e) => {
+            e.stopPropagation();
+            return authState.showSignIn
+              ? authDispatch(EAuthAction.ALL_HIDE)
               : authState.showSignUp
-              ? authDispatch(EAuthAction.SIGNUP_HIDE)
-              : null
-          }
+              ? authDispatch(EAuthAction.ALL_HIDE)
+              : null;
+          }}
         >
           close
         </i>
@@ -83,14 +89,24 @@ export default function Auth(props: ISignUpProps) {
           {authState.showSignIn ? (
             <p>
               Don't have an account?{<br />}
-              <span onClick={() => authDispatch(EAuthAction.SIGNUP_SHOW)}>
+              <span
+                onClick={(e) => {
+                  e.stopPropagation();
+                  authDispatch(EAuthAction.SIGNUP_SHOW);
+                }}
+              >
                 Sign up
               </span>
             </p>
           ) : authState.showSignUp ? (
             <p>
               If you already have an account,{<br />}
-              <span onClick={() => authDispatch(EAuthAction.SIGNIN_SHOW)}>
+              <span
+                onClick={(e) => {
+                  e.stopPropagation();
+                  authDispatch(EAuthAction.SIGNIN_SHOW);
+                }}
+              >
                 Log in
               </span>
             </p>

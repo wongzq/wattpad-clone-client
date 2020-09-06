@@ -9,6 +9,7 @@ import Home from "./screens/Home";
 import NavBar, { AuthContext } from "./components/NavBar";
 import AuthReducer from "./reducers/Auth.reducer";
 import Auth from "./components/Auth";
+import Browse from "./screens/Browse";
 
 ////////////////////////////////////////////////////////////////////////////////
 // UserContext to keep track of when user is logged in, using UserReducer
@@ -43,6 +44,9 @@ const AppRouting = () => {
       <Route exact path="/">
         <Home></Home>
       </Route>
+      <Route exact path="/browse">
+        <Browse></Browse>
+      </Route>
     </Switch>
   );
 };
@@ -60,9 +64,6 @@ export default function App(props: IAppProps) {
     AuthReducer.reducer,
     AuthReducer.initState
   );
-  React.useEffect(() => {
-    console.log("hmm");
-  }, [authState]);
 
   // Return component
   return (

@@ -26,19 +26,26 @@ export default function Home(props: IHomeProps) {
           <div className="nested-top-buttons">
             <button
               className="waves-effect btn-flat btn-orange"
-              onClick={() => authDispatch(EAuthAction.SIGNIN_SHOW)}
+              onClick={(e) => {
+                e.stopPropagation();
+                authDispatch(EAuthAction.SIGNIN_SHOW);
+              }}
             >
               Start Reading
             </button>
             <button
               className="waves-effect btn-flat btn-orange"
-              onClick={() => authDispatch(EAuthAction.SIGNIN_SHOW)}
+              onClick={(e) => {
+                e.stopPropagation();
+                authDispatch(EAuthAction.SIGNIN_SHOW);
+              }}
             >
               Start Writing
             </button>
           </div>
         </div>
       </div>
+      <div style={{ height: "30vh" }} />
     </div>
   );
 }

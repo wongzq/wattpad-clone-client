@@ -1,6 +1,9 @@
 nav {
+  z-index: 1;
+  position: sticky;
   background-color: var(--bg-color);
 }
+
 
 .nav {
   margin: auto;
@@ -20,7 +23,6 @@ nav {
 }
 
 .wattpad-logo {
-  padding: 0 10px;
   max-width: 10rem;
   vertical-align: middle;
 }

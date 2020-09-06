@@ -8,8 +8,7 @@ export interface IAuthState {
 export enum EAuthAction {
   SIGNIN_SHOW,
   SIGNUP_SHOW,
-  SIGNIN_HIDE,
-  SIGNUP_HIDE,
+  ALL_HIDE,
 }
 
 const reducer = (state: IAuthState, action: EAuthAction): IAuthState => {
@@ -19,10 +18,10 @@ const reducer = (state: IAuthState, action: EAuthAction): IAuthState => {
       return { showSignIn: true, showSignUp: false };
     case EAuthAction.SIGNUP_SHOW:
       return { showSignIn: false, showSignUp: true };
-    case EAuthAction.SIGNIN_HIDE:
-    case EAuthAction.SIGNUP_HIDE:
-    default:
+    case EAuthAction.ALL_HIDE:
       return initState;
+    default:
+      return state;
   }
 };
 
