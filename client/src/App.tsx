@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./App.css";
-import { BrowserRouter, Route, Switch, useHistory } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import UserReducer, {
   IUserReducerActionType,
   IUserReducerAction,
@@ -29,7 +29,6 @@ const AppRouting = () => {
   const { userState, userDispatch } = React.useContext(UserContext);
 
   // check if user is logged in
-  const history = useHistory();
   React.useEffect(() => {
     const userStr = localStorage.getItem("user");
     if (userStr) {
