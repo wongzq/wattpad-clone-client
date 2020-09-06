@@ -13,6 +13,7 @@ export enum EAuthAction {
 }
 
 const reducer = (state: IAuthState, action: EAuthAction): IAuthState => {
+  console.log(action);
   switch (action) {
     case EAuthAction.SIGNIN_SHOW:
       return { showSignIn: true, showSignUp: false };

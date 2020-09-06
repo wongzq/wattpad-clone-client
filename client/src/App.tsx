@@ -6,7 +6,9 @@ import UserReducer, {
   IUserReducerAction,
 } from "./reducers/User.reducer";
 import Home from "./screens/Home";
-import NavBar from "./components/NavBar";
+import NavBar, { AuthContext } from "./components/NavBar";
+import AuthReducer from "./reducers/Auth.reducer";
+import Auth from "./components/Auth";
 
 ////////////////////////////////////////////////////////////////////////////////
 // UserContext to keep track of when user is logged in, using UserReducer
@@ -50,20 +52,30 @@ const AppRouting = () => {
 export interface IAppProps {}
 export default function App(props: IAppProps) {
   // React Hooks
-  const [state, dispatch] = React.useReducer(
+  const [userState, userDispatch] = React.useReducer(
     UserReducer.reducer,
     UserReducer.initState
   );
+  const [authState, authDispatch] = React.useReducer(
+    AuthReducer.reducer,
+    AuthReducer.initState
+  );
+  React.useEffect(() => {
+    console.log("hmm");
+  }, [authState]);
 
   // Return component
   return (
-    <UserContext.Provider value={{ userState: state, userDispatch: dispatch }}>
-      <BrowserRouter>
-        <NavBar></NavBar>
-        <div className="home-container">
-          <AppRouting></AppRouting>
-        </div>
-      </BrowserRouter>
+    <UserContext.Provider value={{ userState, userDispatch }}>
+      <AuthContext.Provider value={{ authState, authDispatch }}>
+        {authState.showSignIn || authState.showSignUp ? <Auth /> : null}
+        <BrowserRouter>
+          <NavBar></NavBar>
+          <div className="home-container">
+            <AppRouting></AppRouting>
+          </div>
+        </BrowserRouter>
+      </AuthContext.Provider>
     </UserContext.Provider>
   );
 }

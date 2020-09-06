@@ -1,5 +1,5 @@
 .auth-overlay {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
@@ -20,9 +20,11 @@
 }
 
 .auth-dialog {
-  position: absolute;
+  position: fixed;
   width: 30rem;
+  max-width: 95vw;
   height: 45rem;
+  max-height: 95vh;
   margin: auto;
   left: 50%;
   top: 50%;

@@ -82,14 +82,14 @@ export default function Auth(props: ISignUpProps) {
         <div className="auth-footer">
           {authState.showSignIn ? (
             <p>
-              Don't have an account?{" "}
+              Don't have an account?{<br />}
               <span onClick={() => authDispatch(EAuthAction.SIGNUP_SHOW)}>
                 Sign up
               </span>
             </p>
           ) : authState.showSignUp ? (
             <p>
-              If you already have an account,{" "}
+              If you already have an account,{<br />}
               <span onClick={() => authDispatch(EAuthAction.SIGNIN_SHOW)}>
                 Log in
               </span>

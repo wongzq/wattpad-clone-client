@@ -3,7 +3,14 @@
 :root {
   --width: 80rem;
   --primary-color: #ff4500;
+  --primary-color-dark: #d0370d;
   --bg-color: #fff;
+}
+
+@media only screen and (max-width:600px) {
+   :root {
+    --width: 100rem;
+  }
 }
 
 * {

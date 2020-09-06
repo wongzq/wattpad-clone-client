@@ -19,18 +19,11 @@ export const AuthContext = React.createContext<IAuthContext>({
 export interface INavBarProps {}
 export default function NavBar(props: INavBarProps) {
   // React Hooks
-  const [authState, authDispatch] = React.useReducer(
-    AuthReducer.reducer,
-    AuthReducer.initState
-  );
-  React.useEffect(() => {}, [authState]);
+  const { authDispatch } = React.useContext(AuthContext);
 
   // Return component
   return (
     <div>
-      <AuthContext.Provider value={{ authState, authDispatch }}>
-        {authState.showSignIn || authState.showSignUp ? <Auth /> : null}
-      </AuthContext.Provider>
       <nav>
         <div className="nav">
           <ul>
