@@ -31,7 +31,10 @@ nav {
 }
 
 @media only screen and (max-width:600px) {
+  .nav-item {
+    margin: 0 0.2rem;
+  }
   .wattpad-logo {
-    display: none;
+    max-width: 5rem;
   }
 }

@@ -7,35 +7,31 @@
 }
 
 .btn-close {
-  margin: 1rem;
-  font-size: 2rem;
-  background-color: white;
-  margin-bottom: 10px;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  background-color: var(--bg-color);
   cursor: pointer;
-  border: none;
-  width: 30px;
-  height: 30px;
   font-weight: bold;
-  align-self: flex-start;
 }
 
 .auth-dialog {
   position: fixed;
   width: 30rem;
-  max-width: 95vw;
   height: 45rem;
+  max-width: 95vw;
   max-height: 95vh;
   margin: auto;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
-  border-radius: 5px;
-  background: #fff;
+  border-radius: 0.5rem;
+  background: var(--bg-color);
   box-shadow: 0px 0px 10px 2px;
   display: flex;
   flex-direction: column;
-  color: black;
 }
 
 .auth-header {
@@ -45,7 +41,7 @@
   text-align: center;
 }
 
-.auth-header>h5 {
+.auth-header h5 {
   font-weight: 600;
 }
 
@@ -57,7 +53,7 @@
 
 .auth-body p {
   font-weight: 600;
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
 }
 
 .auth-body input[type=text],
@@ -88,11 +84,15 @@
 }
 
 .auth-btn {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   width: 100%;
   border-radius: 2rem;
   background-color: #222;
   text-transform: initial;
+}
+
+.auth-btn:focus {
+  background-color: #222;
 }
 
 .auth-btn:hover {
@@ -100,7 +100,6 @@
 }
 
 .auth-footer {
-  margin: 1rem 5rem;
   text-align: center;
 }
 

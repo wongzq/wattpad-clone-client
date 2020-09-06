@@ -37,9 +37,9 @@ const AppRouting = () => {
         type: IUserReducerActionType.USER,
         payload: JSON.parse(userStr),
       });
-      history.replace("/home");
+      // history.replace("/home");
     } else {
-      history.replace("/home");
+      // history.replace("/home");
     }
   }, [userState]); // eslint-disable-line react-hooks/exhaustive-deps
 
