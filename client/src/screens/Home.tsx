@@ -25,6 +25,24 @@ export default function Home(props: IBrowseProps) {
           "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/5750/9780575089945.jpg",
         genre: "fantasy",
       },
+      {
+        title: "The Alloy of Law",
+        imgUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/51AT4y75bJL._SX324_BO1,204,203,200_.jpg",
+        genre: "fantasy",
+      },
+      {
+        title: "Shadows of Self",
+        imgUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/51ezXqXvhOL.jpg",
+        genre: "fantasy",
+      },
+      {
+        title: "The Bands of Mourning",
+        imgUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/51D+bsrnDZL._SX325_BO1,204,203,200_.jpg",
+        genre: "fantasy",
+      },
     ],
     [
       {
@@ -61,8 +79,7 @@ export default function Home(props: IBrowseProps) {
       },
       {
         title: "Mockingjay",
-        imgUrl:
-          "https://m.media-amazon.com/images/I/51zkheo7x8L.jpg",
+        imgUrl: "https://m.media-amazon.com/images/I/51zkheo7x8L.jpg",
         genre: "Sci-Fi",
       },
     ],
