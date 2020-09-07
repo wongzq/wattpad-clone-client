@@ -1,3 +1,5 @@
-* {
-  color: black;
+.home-container {
+  margin: auto;
+  padding: 0 20px;
+  max-width: var(--width);
 }

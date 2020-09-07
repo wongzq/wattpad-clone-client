@@ -10,6 +10,26 @@ export default function Home(props: IBrowseProps) {
   const storyCards: IStoryCardInfo[][] = [
     [
       {
+        title: "The Way of Kings",
+        imgUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/71TotnV3idL.jpg",
+        tags: ["fantasy"],
+      },
+      {
+        title: "Words of Radiance",
+        imgUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/71WAIGX6PVL.jpg",
+        tags: ["fantasy"],
+      },
+      {
+        title: "Oathbringer",
+        imgUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/71jya4AxE8L.jpg",
+        tags: ["fantasy"],
+      },
+    ],
+    [
+      {
         title: "The Final Empire",
         imgUrl: "https://m.media-amazon.com/images/I/51Xs1z2wvEL.jpg",
         tags: ["fantasy"],
@@ -47,26 +67,6 @@ export default function Home(props: IBrowseProps) {
     ],
     [
       {
-        title: "The Way of Kings",
-        imgUrl:
-          "https://images-na.ssl-images-amazon.com/images/I/71TotnV3idL.jpg",
-        tags: ["fantasy"],
-      },
-      {
-        title: "Words of Radiance",
-        imgUrl:
-          "https://images-na.ssl-images-amazon.com/images/I/71WAIGX6PVL.jpg",
-        tags: ["fantasy"],
-      },
-      {
-        title: "Oathbringer",
-        imgUrl:
-          "https://images-na.ssl-images-amazon.com/images/I/71jya4AxE8L.jpg",
-        tags: ["fantasy"],
-      },
-    ],
-    [
-      {
         title: "The Hunger Games",
         imgUrl:
           "https://images-na.ssl-images-amazon.com/images/I/61JfGcL2ljL.jpg",
@@ -83,6 +83,24 @@ export default function Home(props: IBrowseProps) {
         imgUrl: "https://m.media-amazon.com/images/I/51zkheo7x8L.jpg",
         tags: ["sci-fi"],
       },
+      {
+        title: "Angels and Demons",
+        imgUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/81S+VsvKTlL.jpg",
+        tags: ["thriller"],
+      },
+      {
+        title: "The Da Vinci Code",
+        imgUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/A15FFg6aNLL.jpg",
+        tags: ["mystery"],
+      },
+      {
+        title: "Inferno",
+        imgUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/915mr+JhBGL.jpg",
+        tags: ["mystery"],
+      },
     ],
   ];
   const storyTiles: IStoryTileInfo[] = [
@@ -95,6 +113,7 @@ export default function Home(props: IBrowseProps) {
       completed: true,
       description:
         "Elantris was the capital of Arelon: gigantic, beautiful, literally radiant, filled with benevolent beings who used their powerful magical abilities for the benefit of all. Yet each of these demigods was once an ordinary person until touched by the mysterious transforming power of the Shaod.",
+      genre: ["fantasy","high fantasy"],
     },
     {
       imgUrl:
@@ -105,23 +124,19 @@ export default function Home(props: IBrowseProps) {
       completed: true,
       description:
         "It is a 1986 horror novel by American author Stephen King. It was his 22nd book, and his 17th novel written under his own name. The story follows the experiences of seven children as they are terrorized by an evil entity that exploits the fears of its victims to disguise itself while hunting its prey.",
+      genre: ["horror","thriller","mystery","supernatural","adventure"],
     },
   ];
 
   return (
-    <div className="browse-container">
-      {/* <div className="slider-container">Slider</div> */}
-      {/* <div className="header">Welcome home, Liith!</div> */}
-      {/* <div className="featured">Featured story</div> */}
-
-      {/* Stories */}
+    <div className="home-container">
       <StoryCards
         title="Top Picks For You"
         featured={storyTiles[0]}
-        stories={storyCards[1]}
+        stories={storyCards[0]}
       />
       <hr />
-      <StoryCards title="New Arrivals" stories={storyCards[0]} />
+      <StoryCards title="New Arrivals" stories={storyCards[1]} />
       <hr />
       <StoryCards
         title="Completed Stories"

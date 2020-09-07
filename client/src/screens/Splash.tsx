@@ -9,7 +9,7 @@ export default function Splash(props: ISplashProps) {
   const { authDispatch } = React.useContext(AuthContext);
 
   return (
-    <div className="home-container">
+    <div className="splash-container">
       <div className="top">
         <div className="top-image">
           <img src={require("../assets/hero-devices.png")} alt="" />

@@ -48,6 +48,15 @@
   font-size: 2rem;
 }
 
+.chip-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chip-container * {
+  margin-right: 1rem;
+}
+
 .story-completed.completed {
   background: #1c6f65;
   color: white;

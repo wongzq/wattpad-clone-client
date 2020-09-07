@@ -8,6 +8,7 @@ export interface IStoryTileInfo {
   parts: number;
   completed: boolean;
   description: string;
+  genre: string[];
 }
 
 export default function StoryTile(props: { story: IStoryTileInfo }) {
@@ -25,13 +26,18 @@ export default function StoryTile(props: { story: IStoryTileInfo }) {
           <i className="material-icons">list</i>
           {props.story.parts} parts
         </span>
-        <div
-          className={
-            "chip story-completed" +
-            (props.story.completed ? " completed" : " draft")
-          }
-        >
-          {props.story.completed ? "Completed" : "Draft"}
+        <div className="chip-container">
+          <div
+            className={
+              "chip story-completed" +
+              (props.story.completed ? " completed" : " draft")
+            }
+          >
+            {props.story.completed ? "Completed" : "Draft"}
+          </div>
+          {props.story.genre.map((genre) => (
+            <div className="chip">{genre}</div>
+          ))}
         </div>
         <i className="material-icons story-add-library"></i>
         <span className="story-description">{props.story.description}</span>
