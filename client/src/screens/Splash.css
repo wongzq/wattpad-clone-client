@@ -84,7 +84,7 @@
 /* 600px or less */
 
 @media only screen and (max-width:600px) {
-  .home-container {
+  .splash-container {
     padding: 0;
     text-align: center;
     justify-content: center;
