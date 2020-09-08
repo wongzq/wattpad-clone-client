@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://wongzq.github.io/wattpad-clone/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -18,7 +19,6 @@
     "react-scripts": "3.4.3",
     "typescript": "^3.7.5"
   },
-  "homepage": "https://wongzq.github.io/wattpad",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
