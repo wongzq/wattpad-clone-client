@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.35c115e4.chunk.css",
-    "main.js": "/static/js/main.7eb853d6.chunk.js",
-    "main.js.map": "/static/js/main.7eb853d6.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.4e0a39ea.js",
-    "runtime-main.js.map": "/static/js/runtime-main.4e0a39ea.js.map",
-    "static/js/2.69d2f90d.chunk.js": "/static/js/2.69d2f90d.chunk.js",
-    "static/js/2.69d2f90d.chunk.js.map": "/static/js/2.69d2f90d.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.f17629894953e442b931d28f6c4d7431.js": "/precache-manifest.f17629894953e442b931d28f6c4d7431.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.35c115e4.chunk.css.map": "/static/css/main.35c115e4.chunk.css.map",
-    "static/js/2.69d2f90d.chunk.js.LICENSE.txt": "/static/js/2.69d2f90d.chunk.js.LICENSE.txt",
-    "static/media/hero-devices.png": "/static/media/hero-devices.be712ab6.png",
-    "static/media/wattpad-title.png": "/static/media/wattpad-title.6b246aea.png"
+    "main.css": "/wattpad-clone-client/static/css/main.35c115e4.chunk.css",
+    "main.js": "/wattpad-clone-client/static/js/main.378afb60.chunk.js",
+    "main.js.map": "/wattpad-clone-client/static/js/main.378afb60.chunk.js.map",
+    "runtime-main.js": "/wattpad-clone-client/static/js/runtime-main.f2d6ef8f.js",
+    "runtime-main.js.map": "/wattpad-clone-client/static/js/runtime-main.f2d6ef8f.js.map",
+    "static/js/2.69d2f90d.chunk.js": "/wattpad-clone-client/static/js/2.69d2f90d.chunk.js",
+    "static/js/2.69d2f90d.chunk.js.map": "/wattpad-clone-client/static/js/2.69d2f90d.chunk.js.map",
+    "index.html": "/wattpad-clone-client/index.html",
+    "precache-manifest.3f3900bbfabbf4992cd95af692bf57ab.js": "/wattpad-clone-client/precache-manifest.3f3900bbfabbf4992cd95af692bf57ab.js",
+    "service-worker.js": "/wattpad-clone-client/service-worker.js",
+    "static/css/main.35c115e4.chunk.css.map": "/wattpad-clone-client/static/css/main.35c115e4.chunk.css.map",
+    "static/js/2.69d2f90d.chunk.js.LICENSE.txt": "/wattpad-clone-client/static/js/2.69d2f90d.chunk.js.LICENSE.txt",
+    "static/media/hero-devices.png": "/wattpad-clone-client/static/media/hero-devices.be712ab6.png",
+    "static/media/wattpad-title.png": "/wattpad-clone-client/static/media/wattpad-title.6b246aea.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.4e0a39ea.js",
+    "static/js/runtime-main.f2d6ef8f.js",
     "static/js/2.69d2f90d.chunk.js",
     "static/css/main.35c115e4.chunk.css",
-    "static/js/main.7eb853d6.chunk.js"
+    "static/js/main.378afb60.chunk.js"
   ]
 }
