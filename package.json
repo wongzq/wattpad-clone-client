@@ -2,7 +2,7 @@
   "name": "wattpad-clone-client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://wongzq.github.io/wattpad-clone-client/",
+  "homepage": "https://wongzq.github.io/wattpad-clone-client",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -12,12 +12,14 @@
     "@types/react": "^16.9.48",
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.5",
-    "gh-pages": "^3.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "typescript": "^3.7.5"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   },
   "scripts": {
     "predeploy": "npm run build",
