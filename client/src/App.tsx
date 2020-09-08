@@ -5,7 +5,7 @@ import UserReducer, {
   IUserReducerActionType,
   IUserReducerAction,
 } from "./reducers/User.reducer";
-import Splash from "./screens/Splash";
+import Landing from "./screens/Landing";
 import NavBar, { AuthContext } from "./components/NavBar";
 import AuthReducer from "./reducers/Auth.reducer";
 import Auth from "./components/Auth";
@@ -46,7 +46,7 @@ const AppRouting = () => {
   return (
     <Switch>
       <Route exact path="/">
-        <Splash></Splash>
+        <Landing></Landing>
       </Route>
       <Route exact path="/home">
         <Home></Home>

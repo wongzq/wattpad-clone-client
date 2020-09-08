@@ -1,15 +1,15 @@
 import * as React from "react";
-import "./Splash.css";
+import "./Landing.css";
 import { AuthContext } from "../components/NavBar";
 import { EAuthAction } from "../reducers/Auth.reducer";
 
 export interface ISplashProps {}
 
-export default function Splash(props: ISplashProps) {
+export default function Landing(props: ISplashProps) {
   const { authDispatch } = React.useContext(AuthContext);
 
   return (
-    <div className="splash-container">
+    <div className="landing-container">
       <div className="top">
         <div className="top-image">
           <img src={require("../assets/hero-devices.png")} alt="" />

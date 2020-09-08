@@ -1,4 +1,4 @@
-.splash-container {
+.landing-container {
   margin: auto;
   padding: 0 20px;
   max-width: var(--width);
@@ -84,7 +84,7 @@
 /* 600px or less */
 
 @media only screen and (max-width:600px) {
-  .splash-container {
+  .landing-container {
     padding: 0;
     text-align: center;
     justify-content: center;
