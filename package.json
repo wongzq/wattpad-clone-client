@@ -2,7 +2,7 @@
   "name": "wattpad-clone-client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://wongzq.github.io/wattpad-clone/",
+  "homepage": "http://wongzq.github.io/wattpad-clone-client/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
