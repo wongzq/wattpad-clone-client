@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/wattpad-clone/static/css/main.35c115e4.chunk.css",
-    "main.js": "/wattpad-clone/static/js/main.9b3f13be.chunk.js",
-    "main.js.map": "/wattpad-clone/static/js/main.9b3f13be.chunk.js.map",
-    "runtime-main.js": "/wattpad-clone/static/js/runtime-main.50fb6a42.js",
-    "runtime-main.js.map": "/wattpad-clone/static/js/runtime-main.50fb6a42.js.map",
-    "static/js/2.662c6c24.chunk.js": "/wattpad-clone/static/js/2.662c6c24.chunk.js",
-    "static/js/2.662c6c24.chunk.js.map": "/wattpad-clone/static/js/2.662c6c24.chunk.js.map",
-    "index.html": "/wattpad-clone/index.html",
-    "precache-manifest.a2ab6e7d7a14874a940d9a5f46a1c456.js": "/wattpad-clone/precache-manifest.a2ab6e7d7a14874a940d9a5f46a1c456.js",
-    "service-worker.js": "/wattpad-clone/service-worker.js",
-    "static/css/main.35c115e4.chunk.css.map": "/wattpad-clone/static/css/main.35c115e4.chunk.css.map",
-    "static/js/2.662c6c24.chunk.js.LICENSE.txt": "/wattpad-clone/static/js/2.662c6c24.chunk.js.LICENSE.txt",
-    "static/media/hero-devices.png": "/wattpad-clone/static/media/hero-devices.be712ab6.png",
-    "static/media/wattpad-title.png": "/wattpad-clone/static/media/wattpad-title.6b246aea.png"
+    "main.css": "/static/css/main.35c115e4.chunk.css",
+    "main.js": "/static/js/main.7eb853d6.chunk.js",
+    "main.js.map": "/static/js/main.7eb853d6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.4e0a39ea.js",
+    "runtime-main.js.map": "/static/js/runtime-main.4e0a39ea.js.map",
+    "static/js/2.69d2f90d.chunk.js": "/static/js/2.69d2f90d.chunk.js",
+    "static/js/2.69d2f90d.chunk.js.map": "/static/js/2.69d2f90d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.f17629894953e442b931d28f6c4d7431.js": "/precache-manifest.f17629894953e442b931d28f6c4d7431.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.35c115e4.chunk.css.map": "/static/css/main.35c115e4.chunk.css.map",
+    "static/js/2.69d2f90d.chunk.js.LICENSE.txt": "/static/js/2.69d2f90d.chunk.js.LICENSE.txt",
+    "static/media/hero-devices.png": "/static/media/hero-devices.be712ab6.png",
+    "static/media/wattpad-title.png": "/static/media/wattpad-title.6b246aea.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.50fb6a42.js",
-    "static/js/2.662c6c24.chunk.js",
+    "static/js/runtime-main.4e0a39ea.js",
+    "static/js/2.69d2f90d.chunk.js",
     "static/css/main.35c115e4.chunk.css",
-    "static/js/main.9b3f13be.chunk.js"
+    "static/js/main.7eb853d6.chunk.js"
   ]
 }
