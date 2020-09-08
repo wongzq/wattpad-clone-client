@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/wattpad-clone/static/css/main.35c115e4.chunk.css",
-    "main.js": "/wattpad-clone/static/js/main.97e0a1e7.chunk.js",
-    "main.js.map": "/wattpad-clone/static/js/main.97e0a1e7.chunk.js.map",
+    "main.js": "/wattpad-clone/static/js/main.e9c73c0a.chunk.js",
+    "main.js.map": "/wattpad-clone/static/js/main.e9c73c0a.chunk.js.map",
     "runtime-main.js": "/wattpad-clone/static/js/runtime-main.50fb6a42.js",
     "runtime-main.js.map": "/wattpad-clone/static/js/runtime-main.50fb6a42.js.map",
     "static/js/2.23d670e2.chunk.js": "/wattpad-clone/static/js/2.23d670e2.chunk.js",
     "static/js/2.23d670e2.chunk.js.map": "/wattpad-clone/static/js/2.23d670e2.chunk.js.map",
     "index.html": "/wattpad-clone/index.html",
-    "precache-manifest.5455d96c36064f8574715b8f926baac3.js": "/wattpad-clone/precache-manifest.5455d96c36064f8574715b8f926baac3.js",
+    "precache-manifest.4ce180bcbfc25b1d2b30cdf57c127567.js": "/wattpad-clone/precache-manifest.4ce180bcbfc25b1d2b30cdf57c127567.js",
     "service-worker.js": "/wattpad-clone/service-worker.js",
     "static/css/main.35c115e4.chunk.css.map": "/wattpad-clone/static/css/main.35c115e4.chunk.css.map",
     "static/js/2.23d670e2.chunk.js.LICENSE.txt": "/wattpad-clone/static/js/2.23d670e2.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.50fb6a42.js",
     "static/js/2.23d670e2.chunk.js",
     "static/css/main.35c115e4.chunk.css",
-    "static/js/main.97e0a1e7.chunk.js"
+    "static/js/main.e9c73c0a.chunk.js"
   ]
 }
