@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import UserReducer, {
   IUserReducerActionType,
   IUserReducerAction,
@@ -46,10 +46,10 @@ const AppRouting = () => {
   return (
     <Switch>
       <Route exact path="/">
-        <Landing></Landing>
+        <Landing />
       </Route>
       <Route exact path="/home">
-        <Home></Home>
+        <Home />
       </Route>
     </Switch>
   );
@@ -74,12 +74,12 @@ export default function App(props: IAppProps) {
     <UserContext.Provider value={{ userState, userDispatch }}>
       <AuthContext.Provider value={{ authState, authDispatch }}>
         {authState.showSignIn || authState.showSignUp ? <Auth /> : null}
-        <BrowserRouter>
+        <HashRouter>
           <NavBar></NavBar>
           <div className="home-container">
-            <AppRouting></AppRouting>
+            <AppRouting />
           </div>
-        </BrowserRouter>
+        </HashRouter>
       </AuthContext.Provider>
     </UserContext.Provider>
   );
