@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c7025089044a107a6622b4f8039b2d58",
+    "revision": "0c5a08800d6832629ab4a5de177e08c8",
     "url": "/wattpad-clone/index.html"
   },
   {
-    "revision": "272b62e3c9c3a8663b55",
+    "revision": "a2ee2de4f25fc24c1175",
     "url": "/wattpad-clone/static/css/main.35c115e4.chunk.css"
   },
   {
-    "revision": "fac64b1c8c56f044209f",
-    "url": "/wattpad-clone/static/js/2.23d670e2.chunk.js"
+    "revision": "8f45caa0a7f3462c0496",
+    "url": "/wattpad-clone/static/js/2.662c6c24.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/wattpad-clone/static/js/2.23d670e2.chunk.js.LICENSE.txt"
+    "url": "/wattpad-clone/static/js/2.662c6c24.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "272b62e3c9c3a8663b55",
-    "url": "/wattpad-clone/static/js/main.e9c73c0a.chunk.js"
+    "revision": "a2ee2de4f25fc24c1175",
+    "url": "/wattpad-clone/static/js/main.9b3f13be.chunk.js"
   },
   {
     "revision": "054acea38b21561538ce",

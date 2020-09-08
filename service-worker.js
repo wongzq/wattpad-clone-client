@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/wattpad-clone/precache-manifest.4ce180bcbfc25b1d2b30cdf57c127567.js"
+  "/wattpad-clone/precache-manifest.a2ab6e7d7a14874a940d9a5f46a1c456.js"
 );
 
 self.addEventListener('message', (event) => {
