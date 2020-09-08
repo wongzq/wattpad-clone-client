@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0c5a08800d6832629ab4a5de177e08c8",
+    "revision": "d5615e69ab97e23e3ae9a6730074ef9e",
     "url": "/wattpad-clone/index.html"
   },
   {
-    "revision": "a2ee2de4f25fc24c1175",
+    "revision": "763f0aceb3337de306e6",
     "url": "/wattpad-clone/static/css/main.35c115e4.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wattpad-clone/static/js/2.662c6c24.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a2ee2de4f25fc24c1175",
-    "url": "/wattpad-clone/static/js/main.9b3f13be.chunk.js"
+    "revision": "763f0aceb3337de306e6",
+    "url": "/wattpad-clone/static/js/main.5ba545e8.chunk.js"
   },
   {
     "revision": "054acea38b21561538ce",
