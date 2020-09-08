@@ -18,7 +18,9 @@
     "react-scripts": "3.4.3",
     "typescript": "^3.7.5"
   },
+  "homepage": "https://wongzq.github.io/wattpad",
   "scripts": {
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
