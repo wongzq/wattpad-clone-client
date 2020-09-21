@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./App.css";
+import styles from "./App.module.css";
 import { HashRouter, Route, Switch } from "react-router-dom";
 import UserReducer, {
   IUserReducerActionType,
