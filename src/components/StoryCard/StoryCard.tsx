@@ -7,7 +7,7 @@ import {
   MCSS_CardImage,
   MCSS_Chip,
   MCSS_Icon,
-} from "./StoryCardStyle";
+} from "./StoryCard.style";
 
 export interface IStoryCardInfo {
   title?: string;
