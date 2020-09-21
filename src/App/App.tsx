@@ -4,12 +4,12 @@ import { HashRouter, Route, Switch } from "react-router-dom";
 import UserReducer, {
   IUserReducerActionType,
   IUserReducerAction,
-} from "./reducers/User.reducer";
-import Landing from "./screens/Landing";
-import NavBar, { AuthContext } from "./components/NavBar";
-import AuthReducer from "./reducers/Auth.reducer";
-import Auth from "./components/Auth";
-import Home from "./screens/Home";
+} from "../reducers/User.reducer";
+import Landing from "../screens/Landing";
+import NavBar, { AuthContext } from "../components/NavBar";
+import AuthReducer from "../reducers/Auth.reducer";
+import Auth from "../components/Auth";
+import Home from "../screens/Home";
 
 ////////////////////////////////////////////////////////////////////////////////
 // UserContext to keep track of when user is logged in, using UserReducer
