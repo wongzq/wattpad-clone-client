@@ -5,6 +5,7 @@ import AuthReducer, {
 } from "../../reducers/Auth.reducer";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
+import { UserContext } from "../../App/App";
 
 ////////////////////////////////////////////////////////////////////////////////
 // AuthContext for AuthReducer
@@ -22,6 +23,7 @@ export const AuthContext = React.createContext<IAuthContext>({
 export interface INavBarProps {}
 export default function NavBar(props: INavBarProps) {
   // React Hooks
+  const { userState } = React.useContext(UserContext);
   const { authDispatch } = React.useContext(AuthContext);
 
   // Return component
@@ -50,15 +52,19 @@ export default function NavBar(props: INavBarProps) {
           </ul>
           <ul className="right">
             <li>
-              <div
-                className="nav-item"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  authDispatch(EAuthAction.SIGNIN_SHOW);
-                }}
-              >
-                Log in
-              </div>
+              {userState ? (
+                <div></div>
+              ) : (
+                <div
+                  className="nav-item"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    authDispatch(EAuthAction.SIGNIN_SHOW);
+                  }}
+                >
+                    Profile
+                </div>
+              )}
             </li>
           </ul>
         </div>

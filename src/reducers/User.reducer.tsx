@@ -1,4 +1,8 @@
-const initState = null;
+const initState = { data: null };
+
+export interface IUserState {
+  data?: string | null;
+}
 
 export interface IUserReducerAction {
   type?: IUserReducerActionType;
@@ -10,7 +14,10 @@ export enum IUserReducerActionType {
   LOGOUT,
 }
 
-const reducer = (state: {} | null | undefined, action: IUserReducerAction) => {
+const reducer = (
+  state: IUserState | null | undefined,
+  action: IUserReducerAction
+) => {
   switch (action.type) {
     case IUserReducerActionType.USER:
       return action.payload;
