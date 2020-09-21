@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./Auth.css";
-import { AuthContext } from "../NavBar/NavBar";
+import { AuthContext } from "../../App/App";
 import { EAuthAction } from "../../reducers/Auth.reducer";
 
 ////////////////////////////////////////////////////////////////////////////////

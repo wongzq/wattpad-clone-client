@@ -5,18 +5,7 @@ import AuthReducer, {
 } from "../../reducers/Auth.reducer";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
-import { UserContext } from "../../App/App";
-
-////////////////////////////////////////////////////////////////////////////////
-// AuthContext for AuthReducer
-export interface IAuthContext {
-  authState: IAuthState;
-  authDispatch: React.Dispatch<EAuthAction>;
-}
-export const AuthContext = React.createContext<IAuthContext>({
-  authState: AuthReducer.initState,
-  authDispatch: () => {},
-});
+import { AuthContext, UserContext } from "../../App/App";
 
 ////////////////////////////////////////////////////////////////////////////////
 // NavBar
@@ -53,7 +42,7 @@ export default function NavBar(props: INavBarProps) {
           <ul className="right">
             <li>
               {userState ? (
-                <div></div>
+                <div className="nav-item">Profile</div>
               ) : (
                 <div
                   className="nav-item"
@@ -62,7 +51,7 @@ export default function NavBar(props: INavBarProps) {
                     authDispatch(EAuthAction.SIGNIN_SHOW);
                   }}
                 >
-                    Profile
+                  Log in
                 </div>
               )}
             </li>

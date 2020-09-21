@@ -5,9 +5,9 @@ import UserReducer, {
   IUserReducerActionType,
   IUserReducerAction,
 } from "../reducers/User.reducer";
-import AuthReducer from "../reducers/Auth.reducer";
+import AuthReducer, { EAuthAction, IAuthState } from "../reducers/Auth.reducer";
 import Auth from "../components/Auth/Auth";
-import NavBar, { AuthContext } from "../components/NavBar/NavBar";
+import NavBar from "../components/NavBar/NavBar";
 import Landing from "../screens/Landing/Landing";
 import Home from "../screens/Home/Home";
 
@@ -20,6 +20,17 @@ export interface IUserContext {
 export const UserContext = React.createContext<IUserContext>({
   userState: {},
   userDispatch: () => {},
+});
+
+////////////////////////////////////////////////////////////////////////////////
+// AuthContext for AuthReducer
+export interface IAuthContext {
+  authState: IAuthState;
+  authDispatch: React.Dispatch<EAuthAction>;
+}
+export const AuthContext = React.createContext<IAuthContext>({
+  authState: AuthReducer.initState,
+  authDispatch: () => {},
 });
 
 ////////////////////////////////////////////////////////////////////////////////

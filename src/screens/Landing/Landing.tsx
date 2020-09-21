@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./Landing.css";
-import { AuthContext } from "../../components/NavBar/NavBar";
+import { AuthContext } from "../../App/App";
 import { EAuthAction } from "../../reducers/Auth.reducer";
 
 export interface ISplashProps {}
