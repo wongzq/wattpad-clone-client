@@ -1,28 +1,25 @@
-const initState = { data: null };
-
 export interface IUserState {
-  data?: string | null;
+  data: {};
 }
 
-export interface IUserReducerAction {
-  type?: IUserReducerActionType;
-  payload?: any;
+export interface IUserAction {
+  type: IUserActionType;
+  payload?: IUserState;
 }
 
-export enum IUserReducerActionType {
+export enum IUserActionType {
   USER,
   LOGOUT,
 }
 
-const reducer = (
-  state: IUserState | null | undefined,
-  action: IUserReducerAction
-) => {
+const initState: IUserState = { data: {} };
+
+const reducer = (state: IUserState, action: IUserAction): IUserState => {
   switch (action.type) {
-    case IUserReducerActionType.USER:
-      return action.payload;
-    case IUserReducerActionType.LOGOUT:
-      return null;
+    case IUserActionType.USER:
+      return action.payload ?? state;
+    case IUserActionType.LOGOUT:
+      return initState;
     default:
       return state;
   }

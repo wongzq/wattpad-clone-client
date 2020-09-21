@@ -2,25 +2,15 @@ import * as React from "react";
 import "./App.module.css";
 import { HashRouter, Route, Switch } from "react-router-dom";
 import UserReducer, {
-  IUserReducerActionType,
-  IUserReducerAction,
+  IUserActionType,
+  IUserAction,
+  IUserState,
 } from "../reducers/User.reducer";
 import AuthReducer, { EAuthAction, IAuthState } from "../reducers/Auth.reducer";
 import Auth from "../components/Auth/Auth";
 import NavBar from "../components/NavBar/NavBar";
 import Landing from "../screens/Landing/Landing";
 import Home from "../screens/Home/Home";
-
-////////////////////////////////////////////////////////////////////////////////
-// UserContext to keep track of when user is logged in, using UserReducer
-export interface IUserContext {
-  userState: any;
-  userDispatch: React.Dispatch<IUserReducerAction>;
-}
-export const UserContext = React.createContext<IUserContext>({
-  userState: {},
-  userDispatch: () => {},
-});
 
 ////////////////////////////////////////////////////////////////////////////////
 // AuthContext for AuthReducer
@@ -34,6 +24,17 @@ export const AuthContext = React.createContext<IAuthContext>({
 });
 
 ////////////////////////////////////////////////////////////////////////////////
+// UserContext to keep track of when user is logged in, using UserReducer
+export interface IUserContext {
+  userState: IUserState;
+  userDispatch: React.Dispatch<IUserAction>;
+}
+export const UserContext = React.createContext<IUserContext>({
+  userState: UserReducer.initState,
+  userDispatch: () => {},
+});
+
+////////////////////////////////////////////////////////////////////////////////
 // AppRouting Local Component
 const AppRouting = () => {
   // React Hooks
@@ -44,7 +45,7 @@ const AppRouting = () => {
     const userStr = localStorage.getItem("user");
     if (userStr) {
       userDispatch({
-        type: IUserReducerActionType.USER,
+        type: IUserActionType.USER,
         payload: JSON.parse(userStr),
       });
       // history.replace("/home");

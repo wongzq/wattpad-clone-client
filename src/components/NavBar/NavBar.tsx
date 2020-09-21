@@ -6,14 +6,16 @@ import AuthReducer, {
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 import { AuthContext, UserContext } from "../../App/App";
+import { IUserActionType } from "../../reducers/User.reducer";
 
 ////////////////////////////////////////////////////////////////////////////////
 // NavBar
 export interface INavBarProps {}
 export default function NavBar(props: INavBarProps) {
   // React Hooks
-  const { userState } = React.useContext(UserContext);
+  const { userState, userDispatch } = React.useContext(UserContext);
   const { authDispatch } = React.useContext(AuthContext);
+  const [open, setOpen] = React.useState(false);
 
   // Return component
   return (
@@ -42,7 +44,29 @@ export default function NavBar(props: INavBarProps) {
           <ul className="right">
             <li>
               {userState ? (
-                <div className="nav-item">Profile</div>
+                <div>
+                  <div className="nav-item" onClick={() => setOpen(!open)}>
+                    Me
+                  </div>
+                  {!open && (
+                    <ul className="dropdown-container">
+                      <li className="dropdown-item">Profile</li>
+                      <hr />
+                      <li className="dropdown-item">My Works</li>
+                      <li className="dropdown-item">Libraries</li>
+                      <hr />
+                      <li
+                        className="dropdown-item"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          userDispatch({ type: IUserActionType.LOGOUT });
+                        }}
+                      >
+                        Log out
+                      </li>
+                    </ul>
+                  )}
+                </div>
               ) : (
                 <div
                   className="nav-item"

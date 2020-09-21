@@ -1,5 +1,3 @@
-const initState: IAuthState = { showSignUp: false, showSignIn: false };
-
 export interface IAuthState {
   showSignIn: boolean;
   showSignUp: boolean;
@@ -10,6 +8,8 @@ export enum EAuthAction {
   SIGNUP_SHOW,
   ALL_HIDE,
 }
+
+const initState: IAuthState = { showSignUp: false, showSignIn: false };
 
 const reducer = (state: IAuthState, action: EAuthAction): IAuthState => {
   switch (action) {
