@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./Landing.css";
-import { AuthContext } from "../components/NavBar";
-import { EAuthAction } from "../reducers/Auth.reducer";
+import { AuthContext } from "../../components/NavBar/NavBar";
+import { EAuthAction } from "../../reducers/Auth.reducer";
 
 export interface ISplashProps {}
 
@@ -12,7 +12,7 @@ export default function Landing(props: ISplashProps) {
     <div className="landing-container">
       <div className="top">
         <div className="top-image">
-          <img src={require("../assets/hero-devices.png")} alt="" />
+          <img src={require("../../assets/hero-devices.png")} alt="" />
         </div>
         <div className="top-title">
           <h1>Hi, we're Wattpad.</h1>

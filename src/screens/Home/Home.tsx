@@ -1,8 +1,8 @@
 import * as React from "react";
 import "./Home.css";
-import StoryCards from "../components/StoryCards";
-import { IStoryCardInfo } from "../components/StoryCard";
-import { IStoryTileInfo } from "../components/StoryTile";
+import StoryCards from "../../components/StoryCards/StoryCards";
+import { IStoryCardInfo } from "../../components/StoryCard/StoryCard";
+import { IStoryTileInfo } from "../../components/StoryTile/StoryTile";
 
 export interface IBrowseProps {}
 

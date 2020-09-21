@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./Auth.css";
-import { AuthContext } from "./NavBar";
-import { EAuthAction } from "../reducers/Auth.reducer";
+import { AuthContext } from "../NavBar/NavBar";
+import { EAuthAction } from "../../reducers/Auth.reducer";
 
 ////////////////////////////////////////////////////////////////////////////////
 export interface ISignUpProps {}

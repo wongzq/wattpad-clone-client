@@ -1,0 +1,41 @@
+.story-cards-container {
+  padding: 0;
+  margin-bottom: 3rem;
+}
+
+.story-cards-container > h4 {
+  padding: 0.5rem 1rem;
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  letter-spacing: 0.4rem;
+}
+
+.stories-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  overflow: auto;
+  padding: 0.5rem;
+}
+
+.stories-list::-webkit-scrollbar {
+  display: none;
+}
+
+.story-card {
+  margin-left: 1rem;
+  margin-right: 4rem;
+}
+
+hr {
+  background-color: #ddd;
+  border: 1.5px solid #ddd;
+  border-radius: 0.5rem;
+}
+/*# sourceMappingURL=StoryCards.css.map */

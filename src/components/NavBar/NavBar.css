@@ -1,0 +1,42 @@
+.nav-container {
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1;
+}
+
+nav {
+  background-color: var(--bg-color);
+}
+
+.nav-content {
+  margin: auto;
+  padding: 0px 10px;
+  max-width: var(--width);
+}
+
+.nav-item {
+  margin: 0 1rem;
+  font-weight: 600;
+  color: black !important;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background-color: var(--bg-color) !important;
+}
+
+.wattpad-logo {
+  max-width: 10rem;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-item {
+    margin: 0 0.2rem;
+  }
+  .wattpad-logo {
+    max-width: 5rem;
+  }
+}
+/*# sourceMappingURL=NavBar.css.map */

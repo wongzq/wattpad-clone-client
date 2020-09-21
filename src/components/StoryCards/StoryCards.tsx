@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./StoryCards.css";
-import StoryCard, { IStoryCardInfo } from "./StoryCard";
-import StoryTile, { IStoryTileInfo } from "./StoryTile";
+import StoryCard, { IStoryCardInfo } from "../StoryCard/StoryCard";
+import StoryTile, { IStoryTileInfo } from "../StoryTile/StoryTile";
 
 export interface IStoryCardsProps {
   title: string;

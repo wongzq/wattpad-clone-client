@@ -5,11 +5,11 @@ import UserReducer, {
   IUserReducerActionType,
   IUserReducerAction,
 } from "../reducers/User.reducer";
-import Landing from "../screens/Landing";
-import NavBar, { AuthContext } from "../components/NavBar";
 import AuthReducer from "../reducers/Auth.reducer";
-import Auth from "../components/Auth";
-import Home from "../screens/Home";
+import Auth from "../components/Auth/Auth";
+import NavBar, { AuthContext } from "../components/NavBar/NavBar";
+import Landing from "../screens/Landing/Landing";
+import Home from "../screens/Home/Home";
 
 ////////////////////////////////////////////////////////////////////////////////
 // UserContext to keep track of when user is logged in, using UserReducer

@@ -1,5 +1,8 @@
 import * as React from "react";
-import AuthReducer, { IAuthState, EAuthAction } from "../reducers/Auth.reducer";
+import AuthReducer, {
+  IAuthState,
+  EAuthAction,
+} from "../../reducers/Auth.reducer";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 
@@ -31,7 +34,7 @@ export default function NavBar(props: INavBarProps) {
               <Link to="/" className="nav-item">
                 <img
                   className="nav-item wattpad-logo"
-                  src={require("../assets/wattpad-title.png")}
+                  src={require("../../assets/wattpad-title.png")}
                   alt="Wattpad"
                 />
               </Link>
