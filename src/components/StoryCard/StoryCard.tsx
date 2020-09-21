@@ -3,10 +3,10 @@ import "./StoryCard.css";
 import {
   StoryCardContainer,
   StoryCardTags,
-  MaterializeCard,
-  MaterializeCardImage,
-  MaterializeChip,
-  MaterializeIcon,
+  MCSS_Card,
+  MCSS_CardImage,
+  MCSS_Chip,
+  MCSS_Icon,
 } from "./StoryCardStyle";
 
 export interface IStoryCardInfo {
@@ -20,14 +20,14 @@ export default function StoryCard(props: { story: IStoryCardInfo }) {
 
   return useStyledComponents ? (
     <StoryCardContainer>
-      <MaterializeCard className="card">
+      <MCSS_Card className="card">
         <div className="card-image">
-          <MaterializeCardImage src={props.story.imgUrl} />
+          <MCSS_CardImage src={props.story.imgUrl}></MCSS_CardImage>
         </div>
-      </MaterializeCard>
+      </MCSS_Card>
       <StoryCardTags>
-        <MaterializeIcon className="material-icons">bookmark</MaterializeIcon>
-        <MaterializeChip className="chip">{props.story.tags}</MaterializeChip>
+        <MCSS_Icon className="material-icons">bookmark</MCSS_Icon>
+        <MCSS_Chip className="chip">{props.story.tags}</MCSS_Chip>
       </StoryCardTags>
     </StoryCardContainer>
   ) : (
