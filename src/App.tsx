@@ -71,8 +71,8 @@ export default function App(props: IAppProps) {
 
   // Return component
   return (
-    <UserContext.Provider value={{ userState, userDispatch }}>
-      <AuthContext.Provider value={{ authState, authDispatch }}>
+    <AuthContext.Provider value={{ authState, authDispatch }}>
+      <UserContext.Provider value={{ userState, userDispatch }}>
         {authState.showSignIn || authState.showSignUp ? <Auth /> : null}
         <HashRouter>
           <NavBar></NavBar>
@@ -80,7 +80,7 @@ export default function App(props: IAppProps) {
             <AppRouting />
           </div>
         </HashRouter>
-      </AuthContext.Provider>
-    </UserContext.Provider>
+      </UserContext.Provider>
+    </AuthContext.Provider>
   );
 }
