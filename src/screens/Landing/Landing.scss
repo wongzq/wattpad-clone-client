@@ -92,7 +92,7 @@
   .top {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
   }
   .top-image {
     grid-column: 1/2;
