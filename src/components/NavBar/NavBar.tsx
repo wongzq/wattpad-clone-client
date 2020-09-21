@@ -43,12 +43,12 @@ export default function NavBar(props: INavBarProps) {
           </ul>
           <ul className="right">
             <li>
-              {userState ? (
+              {userState.data ? (
                 <div>
                   <div className="nav-item" onClick={() => setOpen(!open)}>
                     Me
                   </div>
-                  {!open && (
+                  {open && (
                     <ul className="dropdown-container">
                       <li className="dropdown-item">Profile</li>
                       <hr />
@@ -60,6 +60,7 @@ export default function NavBar(props: INavBarProps) {
                         onClick={(e) => {
                           e.stopPropagation();
                           userDispatch({ type: IUserActionType.LOGOUT });
+                          setOpen(false);
                         }}
                       >
                         Log out

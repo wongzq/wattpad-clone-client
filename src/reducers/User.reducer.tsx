@@ -1,5 +1,5 @@
 export interface IUserState {
-  data: {};
+  data: {} | null;
 }
 
 export interface IUserAction {
@@ -12,7 +12,7 @@ export enum IUserActionType {
   LOGOUT,
 }
 
-const initState: IUserState = { data: {} };
+const initState: IUserState = { data: null };
 
 const reducer = (state: IUserState, action: IUserAction): IUserState => {
   switch (action.type) {

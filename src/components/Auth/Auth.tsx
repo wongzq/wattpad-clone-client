@@ -1,13 +1,15 @@
 import * as React from "react";
 import "./Auth.css";
-import { AuthContext } from "../../App/App";
+import { AuthContext, UserContext } from "../../App/App";
 import { EAuthAction } from "../../reducers/Auth.reducer";
+import { IUserActionType } from "../../reducers/User.reducer";
 
 ////////////////////////////////////////////////////////////////////////////////
 export interface ISignUpProps {}
 export default function Auth(props: ISignUpProps) {
   // React Hooks
   const { authState, authDispatch } = React.useContext(AuthContext);
+  const { userDispatch } = React.useContext(UserContext);
 
   // Custom functions
   const signInWithEmail = (e: React.MouseEvent) => {
@@ -99,6 +101,7 @@ export default function Auth(props: ISignUpProps) {
                 onClick={(e) => {
                   e.stopPropagation();
                   authDispatch(EAuthAction.SIGNIN_SHOW);
+                  userDispatch({ type: IUserActionType.USER });
                 }}
               >
                 Log in
