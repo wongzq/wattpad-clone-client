@@ -15,8 +15,8 @@ export default function StoryCards(props: IStoryCardsProps) {
       <h4>{props.title}</h4>
       {props.featured ? <StoryTile story={props.featured} /> : null}
       <div className="stories-list">
-        {props.stories.map((story) => (
-          <div className="story-card">
+        {props.stories.map((story, index) => (
+          <div className="story-card" key={index}>
             <StoryCard story={story} />
           </div>
         ))}

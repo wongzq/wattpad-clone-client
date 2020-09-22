@@ -1,5 +1,5 @@
 import * as React from "react";
-// import "./StoryCard.css";
+import "./StoryCard.scss";
 import styles from "./StoryCard.module.scss";
 import {
   StoryCardContainer,
@@ -16,17 +16,17 @@ export interface IStoryCardInfo {
   tags: string[];
 }
 
-enum CSSDisplay {
+enum EDisplayType {
   StyledComponents,
-  CSSModules,
-  CSSNormal,
+  SCSSModules,
+  SCSSImport,
 }
 
 export default function StoryCard(props: { story: IStoryCardInfo }) {
-  let displayType: CSSDisplay = CSSDisplay.StyledComponents;
+  let displayType: EDisplayType = EDisplayType.SCSSImport;
 
   switch (+displayType) {
-    case CSSDisplay.StyledComponents:
+    case EDisplayType.StyledComponents:
       return (
         <StoryCardContainer>
           <MCSSCard>
@@ -41,7 +41,7 @@ export default function StoryCard(props: { story: IStoryCardInfo }) {
         </StoryCardContainer>
       );
 
-    case CSSDisplay.CSSModules:
+    case EDisplayType.SCSSModules:
       return (
         <div className={styles.storyCardContainer}>
           <div className={styles.card + " card"}>
@@ -56,7 +56,7 @@ export default function StoryCard(props: { story: IStoryCardInfo }) {
         </div>
       );
 
-    case CSSDisplay.CSSNormal:
+    case EDisplayType.SCSSImport:
       return (
         <div className="story-card-container">
           <div className="card">

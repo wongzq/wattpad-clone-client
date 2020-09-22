@@ -42,32 +42,78 @@ li {
 }
 
 .dropdown-container {
-  z-index: 1;
-  background-color: #fff;
-  margin: -0.5rem 1rem;
-  position: absolute;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  border-radius: 0.5rem;
-  box-shadow: 0pt 1pt 5pt #000;
+  &-me,
+  &-browse {
+    z-index: 1;
+    background-color: #fff;
+    margin: -0.5rem 1rem;
+    position: absolute;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    box-shadow: 0pt 1pt 5pt #000;
+  }
 
-  .dropdown-item {
-    line-height: 3rem;
-    padding: 0 1rem;
-    margin: 0.5rem;
-    width: 10rem;
-    color: black;
-    border-radius: 2rem;
-    cursor: pointer;
+  &-me {
+    display: flex;
+    transform: translateX(-100%);
 
-    &:hover {
-      background-color: #ddd;
+    .dropdown-item-me {
+      line-height: 3rem;
+      padding: 0 1rem;
+      margin: 0.5rem;
+      width: 10rem;
+      color: black;
+      border-radius: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+
+    hr {
+      margin: 0 1rem;
     }
   }
 
-  hr {
-    margin: 0 1rem;
+  &-browse {
+    display: grid;
+    transform: translateX(-50%);
+    grid-template-columns: 1fr 1fr 1fr;
+    max-height: 80vh;
+    overflow: auto;
+
+    @media screen and (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dropdown-item-browse-header {
+      grid-column: 1/4;
+      line-height: 2rem;
+      padding: 0 1rem;
+      margin: 0.5rem;
+      width: 10rem;
+      color: black;
+      border-radius: 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .dropdown-item-browse {
+      line-height: 2rem;
+      padding: 0 1rem;
+      margin: 0.5rem;
+      width: 10rem;
+      color: black;
+      border-radius: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ddd;
+      }
+    }
   }
 }
 
@@ -77,5 +123,20 @@ li {
   }
   .wattpad-logo {
     max-width: 5rem;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  &-track {
+    margin: 0.5rem;
+    border-radius: 1rem;
+  }
+  &-thumb {
+    background: #ccc;
+    border-radius: 1rem;
+    &:hover {
+      background: #777;
+    }
   }
 }

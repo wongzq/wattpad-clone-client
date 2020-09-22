@@ -35,8 +35,10 @@ export default function StoryTile(props: { story: IStoryTileInfo }) {
           >
             {props.story.completed ? "Completed" : "Draft"}
           </div>
-          {props.story.genre.map((genre) => (
-            <div className="chip">{genre}</div>
+          {props.story.genre.map((genre, index) => (
+            <div className="chip" key={index}>
+              {genre}
+            </div>
           ))}
         </div>
         <i className="material-icons story-add-library"></i>

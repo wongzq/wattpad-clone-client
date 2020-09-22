@@ -43,15 +43,11 @@ li {
   margin: 0;
 }
 
-.dropdown-container {
+.dropdown-container-menu, .dropdown-container-browse {
   z-index: 1;
   background-color: #fff;
   margin: -0.5rem 1rem;
   position: absolute;
-  right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -61,7 +57,15 @@ li {
           box-shadow: 0pt 1pt 5pt #000;
 }
 
-.dropdown-container .dropdown-item {
+.dropdown-container-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.dropdown-container-menu .dropdown-item-menu {
   line-height: 3rem;
   padding: 0 1rem;
   margin: 0.5rem;
@@ -71,12 +75,66 @@ li {
   cursor: pointer;
 }
 
-.dropdown-container .dropdown-item:hover {
+.dropdown-container-menu .dropdown-item-menu:hover {
   background-color: #ddd;
 }
 
-.dropdown-container hr {
+.dropdown-container-menu hr {
   margin: 0 1rem;
+}
+
+.dropdown-container-browse {
+  display: -ms-grid;
+  display: grid;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .dropdown-container-browse {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
+.dropdown-container-browse .dropdown-item-browse-header {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  line-height: 2rem;
+  padding: 0 1rem;
+  margin: 0.5rem;
+  width: 10rem;
+  color: black;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.dropdown-container-browse .dropdown-item-browse {
+  line-height: 2rem;
+  padding: 0 1rem;
+  margin: 0.5rem;
+  width: 10rem;
+  color: black;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.dropdown-container-browse .dropdown-item-browse:hover {
+  background-color: #ddd;
 }
 
 @media only screen and (max-width: 600px) {
@@ -86,5 +144,23 @@ li {
   .wattpad-logo {
     max-width: 5rem;
   }
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  margin: 0 0.5rem;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
 }
 /*# sourceMappingURL=NavBar.css.map */
