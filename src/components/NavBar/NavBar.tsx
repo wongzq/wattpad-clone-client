@@ -40,9 +40,9 @@ export default function NavBar(props: INavBarProps) {
             </li>
           </ul>
           <ul className="right">
-            <li>
+            <div ref={ref} style={{ backgroundColor: "red" }}>
               {userState.data ? (
-                <div>
+                <li>
                   <div
                     className="nav-item"
                     onClick={() => {
@@ -52,39 +52,39 @@ export default function NavBar(props: INavBarProps) {
                     Me
                   </div>
                   {visible && (
-                    <div ref={ref} style={{ backgroundColor: "red" }}>
-                      <ul className="dropdown-container">
-                        <li className="dropdown-item">Profile</li>
-                        <hr />
-                        <li className="dropdown-item">My Works</li>
-                        <li className="dropdown-item">Libraries</li>
-                        <hr />
-                        <li
-                          className="dropdown-item"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            userDispatch({ type: IUserActionType.LOGOUT });
-                            setVisible(false);
-                          }}
-                        >
-                          Log out
-                        </li>
-                      </ul>
-                    </div>
+                    <ul className="dropdown-container">
+                      <li className="dropdown-item">Profile</li>
+                      <hr />
+                      <li className="dropdown-item">My Works</li>
+                      <li className="dropdown-item">Libraries</li>
+                      <hr />
+                      <li
+                        className="dropdown-item"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          userDispatch({ type: IUserActionType.LOGOUT });
+                          setVisible(false);
+                        }}
+                      >
+                        Log out
+                      </li>
+                    </ul>
                   )}
-                </div>
+                </li>
               ) : (
-                <div
-                  className="nav-item"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    authDispatch(EAuthAction.SIGNIN_SHOW);
-                  }}
-                >
-                  Log in
-                </div>
+                <li>
+                  <div
+                    className="nav-item"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      authDispatch(EAuthAction.SIGNIN_SHOW);
+                    }}
+                  >
+                    Log in
+                  </div>
+                </li>
               )}
-            </li>
+            </div>
           </ul>
         </div>
       </nav>

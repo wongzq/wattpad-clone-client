@@ -76,7 +76,7 @@ li {
 }
 
 .dropdown-container hr {
-  margin: 0 0.5rem;
+  margin: 0 1rem;
 }
 
 @media only screen and (max-width: 600px) {
