@@ -13,7 +13,7 @@ import Landing from "../screens/Landing/Landing";
 import Home from "../screens/Home/Home";
 
 ////////////////////////////////////////////////////////////////////////////////
-// AuthContext for AuthReducer
+// AuthContext to keep track of showing SignIn/SignUp modal, using AuthReducer
 export interface IAuthContext {
   authState: IAuthState;
   authDispatch: React.Dispatch<EAuthAction>;

@@ -66,9 +66,19 @@ export default function Auth(props: ISignUpProps) {
               className="waves-effect waves-light btn auth-btn"
               onClick={
                 authState.showSignIn
-                  ? (e) => signInWithEmail(e)
+                  ? (e) => {
+                      userDispatch({
+                        type: IUserActionType.USER,
+                        payload: { data: "user data" },
+                      });
+                      authDispatch(EAuthAction.ALL_HIDE);
+                      signInWithEmail(e);
+                    }
                   : authState.showSignUp
-                  ? (e) => signUpWithEmail(e)
+                  ? (e) => {
+                      authDispatch(EAuthAction.ALL_HIDE);
+                      signUpWithEmail(e);
+                    }
                   : () => {}
               }
             >
@@ -101,7 +111,6 @@ export default function Auth(props: ISignUpProps) {
                 onClick={(e) => {
                   e.stopPropagation();
                   authDispatch(EAuthAction.SIGNIN_SHOW);
-                  userDispatch({ type: IUserActionType.USER });
                 }}
               >
                 Log in
