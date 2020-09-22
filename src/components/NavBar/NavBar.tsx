@@ -1,12 +1,10 @@
 import * as React from "react";
-import AuthReducer, {
-  IAuthState,
-  EAuthAction,
-} from "../../reducers/Auth.reducer";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
+import { EAuthAction } from "../../reducers/Auth.reducer";
 import { AuthContext, UserContext } from "../../App/App";
 import { IUserActionType } from "../../reducers/User.reducer";
+import { useClickOutside } from "../../hooks/useClickOutside";
 
 ////////////////////////////////////////////////////////////////////////////////
 // NavBar
@@ -15,7 +13,7 @@ export default function NavBar(props: INavBarProps) {
   // React Hooks
   const { userState, userDispatch } = React.useContext(UserContext);
   const { authDispatch } = React.useContext(AuthContext);
-  const [open, setOpen] = React.useState(false);
+  const [ref, visible, setVisible] = useClickOutside(false);
 
   // Return component
   return (
@@ -45,27 +43,34 @@ export default function NavBar(props: INavBarProps) {
             <li>
               {userState.data ? (
                 <div>
-                  <div className="nav-item" onClick={() => setOpen(!open)}>
+                  <div
+                    className="nav-item"
+                    onClick={() => {
+                      setVisible(!visible);
+                    }}
+                  >
                     Me
                   </div>
-                  {open && (
-                    <ul className="dropdown-container">
-                      <li className="dropdown-item">Profile</li>
-                      <hr />
-                      <li className="dropdown-item">My Works</li>
-                      <li className="dropdown-item">Libraries</li>
-                      <hr />
-                      <li
-                        className="dropdown-item"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          userDispatch({ type: IUserActionType.LOGOUT });
-                          setOpen(false);
-                        }}
-                      >
-                        Log out
-                      </li>
-                    </ul>
+                  {visible && (
+                    <div ref={ref} style={{ backgroundColor: "red" }}>
+                      <ul className="dropdown-container">
+                        <li className="dropdown-item">Profile</li>
+                        <hr />
+                        <li className="dropdown-item">My Works</li>
+                        <li className="dropdown-item">Libraries</li>
+                        <hr />
+                        <li
+                          className="dropdown-item"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            userDispatch({ type: IUserActionType.LOGOUT });
+                            setVisible(false);
+                          }}
+                        >
+                          Log out
+                        </li>
+                      </ul>
+                    </div>
                   )}
                 </div>
               ) : (
