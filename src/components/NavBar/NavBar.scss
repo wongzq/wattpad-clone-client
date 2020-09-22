@@ -125,18 +125,3 @@ li {
     max-width: 5rem;
   }
 }
-
-::-webkit-scrollbar {
-  width: 0.5rem;
-  &-track {
-    margin: 0.5rem;
-    border-radius: 1rem;
-  }
-  &-thumb {
-    background: #ccc;
-    border-radius: 1rem;
-    &:hover {
-      background: #777;
-    }
-  }
-}

@@ -23,4 +23,23 @@
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
 }
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  margin: 0.5rem;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 1rem;
+  border: solid 0.25rem white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
 /*# sourceMappingURL=App.module.css.map */

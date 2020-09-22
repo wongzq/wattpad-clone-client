@@ -23,3 +23,19 @@
 .no-shadows {
   box-shadow: none !important;
 }
+
+::-webkit-scrollbar {
+  width: 1rem;
+  &-track {
+    margin: 0.5rem;
+    border-radius: 1rem;
+  }
+  &-thumb {
+    background: #ccc;
+    border-radius: 1rem;
+    border: solid 0.25rem white;
+    &:hover {
+      background: #777;
+    }
+  }
+}
