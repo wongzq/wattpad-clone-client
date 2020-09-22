@@ -64,23 +64,19 @@ export default function Auth(props: ISignUpProps) {
             </div>
             <button
               className="waves-effect waves-light btn auth-btn"
-              onClick={
-                authState.showSignIn
-                  ? (e) => {
-                      userDispatch({
-                        type: IUserActionType.USER,
-                        payload: { data: "user data" },
-                      });
-                      authDispatch(EAuthAction.ALL_HIDE);
-                      signInWithEmail(e);
-                    }
-                  : authState.showSignUp
-                  ? (e) => {
-                      authDispatch(EAuthAction.ALL_HIDE);
-                      signUpWithEmail(e);
-                    }
-                  : () => {}
-              }
+              onClick={(e) => {
+                if (authState.showSignIn) {
+                  signInWithEmail(e);
+                  authDispatch(EAuthAction.ALL_HIDE);
+                  userDispatch({
+                    type: IUserActionType.USER,
+                    payload: { data: "user data" },
+                  });
+                } else if (authState.showSignUp) {
+                  signUpWithEmail(e);
+                  authDispatch(EAuthAction.ALL_HIDE);
+                }
+              }}
             >
               {authState.showSignIn
                 ? "Log in"

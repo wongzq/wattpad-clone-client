@@ -68,6 +68,7 @@ li {
   width: 10rem;
   color: black;
   border-radius: 2rem;
+  cursor: pointer;
 }
 
 .dropdown-container .dropdown-item:hover {
