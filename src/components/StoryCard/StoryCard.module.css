@@ -1,0 +1,34 @@
+.storyCardContainer {
+  margin-right: 2rem;
+}
+
+.card {
+  width: 11rem;
+  border-radius: 0.5rem !important;
+}
+
+.cardImage img {
+  border-radius: 0.5rem !important;
+}
+
+.cardTags {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.materialIcons {
+  font-size: 1.3rem;
+  margin-right: 0.2rem;
+}
+
+.chip {
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+/*# sourceMappingURL=StoryCard.module.css.map */
