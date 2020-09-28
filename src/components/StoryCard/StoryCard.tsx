@@ -23,14 +23,14 @@ enum EDisplayType {
 }
 
 export default function StoryCard(props: { story: IStoryCardInfo }) {
-  let displayType: EDisplayType = EDisplayType.SCSSImport;
+  let displayType: EDisplayType = EDisplayType.StyledComponents;
 
   switch (+displayType) {
     case EDisplayType.StyledComponents:
       return (
         <StoryCardContainer>
           <MCSSCard>
-            <MCSSCardImage>
+            <MCSSCardImage padding={"2rem"}>
               <img src={props.story.imgUrl} alt="Book cover" />
             </MCSSCardImage>
           </MCSSCard>

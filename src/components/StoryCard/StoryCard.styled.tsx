@@ -9,9 +9,13 @@ export const MCSSCard = styled.div.attrs({ className: "card" })`
   border-radius: 0.5rem !important;
 `;
 
+interface Props {
+  padding: string;
+}
 export const MCSSCardImage = styled.div.attrs({ className: "card-image" })`
   & img {
     border-radius: 0.5rem !important;
+    padding: ${(props: Props) => props.padding};
   }
 `;
 
