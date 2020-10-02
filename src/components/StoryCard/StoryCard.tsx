@@ -30,7 +30,7 @@ export default function StoryCard(props: { story: IStoryCardInfo }) {
       return (
         <StoryCardContainer>
           <MCSSCard>
-            <MCSSCardImage padding={"2rem"}>
+            <MCSSCardImage>
               <img src={props.story.imgUrl} alt="Book cover" />
             </MCSSCardImage>
           </MCSSCard>

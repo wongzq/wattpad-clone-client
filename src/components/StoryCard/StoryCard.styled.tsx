@@ -15,7 +15,6 @@ interface Props {
 export const MCSSCardImage = styled.div.attrs({ className: "card-image" })`
   & img {
     border-radius: 0.5rem !important;
-    padding: ${(props: Props) => props.padding};
   }
 `;
 
