@@ -68,14 +68,17 @@
   margin: 1rem 5rem;
 }
 
-.auth-body p {
+.auth-body p,
+.auth-body label {
+  font-size: 1rem;
+  color: #000;
   font-weight: 600;
   margin: 0.3rem 0;
 }
 
-.auth-body input[type=text],
-.auth-body input[type=email],
-.auth-body input[type=password] {
+.auth-body input[type="text"],
+.auth-body input[type="email"],
+.auth-body input[type="password"] {
   padding: 0.5rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -84,9 +87,9 @@
   font-size: 1rem;
 }
 
-.auth-body input[type=text]:focus,
-.auth-body input[type=email]:focus,
-.auth-body input[type=password]:focus {
+.auth-body input[type="text"]:focus,
+.auth-body input[type="email"]:focus,
+.auth-body input[type="password"]:focus {
   border: 1px solid orange !important;
   -webkit-box-shadow: 0 0 0 !important;
           box-shadow: 0 0 0 !important;

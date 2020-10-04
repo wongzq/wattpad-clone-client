@@ -50,17 +50,21 @@ export default function Auth(props: ISignUpProps) {
           <form>
             {authState.showSignUp ? (
               <div>
-                <p>Username</p>
-                <input type="text" placeholder="Enter username" />
+                <label htmlFor="username">Username</label>
+                <input id="username" type="text" placeholder="Enter username" />
               </div>
             ) : null}
             <div>
-              <p>Email</p>
-              <input type="email" placeholder="Enter email" />
+              <label htmlFor="email">Email</label>
+              <input id="email" type="email" placeholder="Enter email" />
             </div>
             <div>
-              <p>Password</p>
-              <input type="password" placeholder="Enter password" />
+              <label htmlFor="password">Password</label>
+              <input
+                id="password"
+                type="password"
+                placeholder="Enter password"
+              />
             </div>
             <button
               className="waves-effect waves-light btn auth-btn"
@@ -92,6 +96,7 @@ export default function Auth(props: ISignUpProps) {
             <p>
               Don't have an account?{<br />}
               <span
+                data-testid="goto-signup"
                 onClick={(e) => {
                   e.stopPropagation();
                   authDispatch(EAuthAction.SIGNUP_SHOW);
@@ -104,6 +109,7 @@ export default function Auth(props: ISignUpProps) {
             <p>
               If you already have an account,{<br />}
               <span
+                data-testid="goto-signin"
                 onClick={(e) => {
                   e.stopPropagation();
                   authDispatch(EAuthAction.SIGNIN_SHOW);
