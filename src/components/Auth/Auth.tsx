@@ -5,8 +5,10 @@ import { EAuthAction } from "../../reducers/Auth.reducer";
 import { IUserActionType } from "../../reducers/User.reducer";
 
 ////////////////////////////////////////////////////////////////////////////////
-export interface ISignUpProps {}
-export default function Auth(props: ISignUpProps) {
+export interface ISignUpProps {
+  name: string;
+}
+export default function Auth({ name }: ISignUpProps) {
   // React Hooks
   const { authState, authDispatch } = React.useContext(AuthContext);
   const { userDispatch } = React.useContext(UserContext);
