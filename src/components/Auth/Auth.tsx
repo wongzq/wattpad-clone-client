@@ -6,7 +6,7 @@ import { IUserActionType } from "../../reducers/User.reducer";
 
 ////////////////////////////////////////////////////////////////////////////////
 export interface ISignUpProps {
-  name: string;
+  name?: string;
 }
 export default function Auth({ name }: ISignUpProps) {
   // React Hooks
